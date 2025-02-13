@@ -41,10 +41,10 @@ const searchWeather = () => {
                 temperature.querySelector('img').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
                 description.innerText = data.weather[0].description;
 
-                clouds.innerText = `Clouds: ${data.clouds.all}%`;
-                humidity.innerText = `Humidity: ${data.main.humidity}%`;
-                windspeed.innerText = `${data.wind.speed} km/h`;
-                pressure.innerText = `Pressure: ${data.main.pressure} hPa`;
+                clouds.innerText = `Clouds: ${data.clouds.all}`;
+                humidity.innerText = `Humidity: ${data.main.humidity}`;
+                windspeed.innerText = `${data.wind.speed} `;
+                pressure.innerText = `Pressure: ${data.main.pressure} `;
 
                 currentTemp = data.main.temp; // Store the temperature
                 updateTemperature(currentTemp); // Update the temperature display
@@ -85,7 +85,6 @@ const convertToFahrenheit = (celsius) => {
 }
 
 // Function to change the background image based on weather conditions
-// Function to change the background image based on weather conditions
 const changeBackground = (weatherMain) => {
     let imageUrl = '';
     
@@ -111,7 +110,7 @@ const changeBackground = (weatherMain) => {
             break;
     }
 
-    // Apply the image with full-screen coverage
+    
     body.style.backgroundImage = imageUrl;
     body.style.backgroundSize = 'cover';      // Ensures the image covers the entire screen
     body.style.backgroundPosition = 'center'; // Centers the image
@@ -136,10 +135,10 @@ const getLocationWeather = () => {
                         temperature.querySelector('img').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
                         description.innerText = data.weather[0].description;
 
-                        clouds.innerText = `Clouds: ${data.clouds.all}%`;
-                        humidity.innerText = `Humidity: ${data.main.humidity}%`;
-                        windspeed.innerText = `${data.wind.speed} km/h`;
-                        pressure.innerText = `Pressure: ${data.main.pressure} hPa`;
+                        clouds.innerText = `Clouds: ${data.clouds.all}`;
+                        humidity.innerText = `Humidity: ${data.main.humidity}`;
+                        windspeed.innerText = `${data.wind.speed} `;
+                        pressure.innerText = `Pressure: ${data.main.pressure} `;
 
                         currentTemp = data.main.temp; // Store the temperature
                         updateTemperature(currentTemp); // Update the temperature display
